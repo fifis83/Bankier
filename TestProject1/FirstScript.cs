@@ -25,6 +25,14 @@ catch
     Console.WriteLine("połączenie nie wyszło ups");
 }
 
-File.WriteAllText("C:/Users/fifis/Desktop/Kursy.txt", textToWrite);
+// Write prices to file 
+try
+{
+    File.WriteAllText("Kursy.txt", textToWrite);
+}
+catch
+{
+    Console.WriteLine("Nie udało się zapisać pliku");
+}
 
 driver.Quit();
